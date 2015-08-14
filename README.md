@@ -1,7 +1,7 @@
 TrueX Ads API for JavaScript 
 ==================================================
 
-This project provides documentation, examples, and an ad starter template for building HTML5 rich-media interative ads (engagements) for TrueX's ad container.
+This project provides documentation, examples, and an ad starter template for building HTML5 rich-media interactive ads (engagements) for TrueX's ad container.
 
 Getting Started
 ---------------
