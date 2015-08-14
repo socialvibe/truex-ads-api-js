@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TrueX Ad Tester</title>
+		<link rel="shortcut icon" href="http://www.truex.com/favicon.ico" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body style="margin:0;padding:0;background:#eee;">
+
+		<input id="engagement_width" type="number" min="0" value="360">
+		<input id="engagement_height" type="number" min="0" value="540">
+
+		<input id="interactive_url" type="text" value="http://">
+		<textarea id="interactive_code"></textarea>
+
+		<button id="load_engagement">Load Ad</button>
+
+		<iframe id="iframe" src="tester.html" frameborder="0" style="position:absolute;overflow:hidden;width:360px;height:540px;"></iframe>
+
+	<script>
+		$(window).load(function() {
+
+			$('#load_engagement').on('click', function() {
+				$('#iframe').attr('src', 'http://serve.truex.com/engage?creative_json_url=http://media.truex.com.s3.amazonaws.com/studio/1.0/preview_mobile.json&preview=true');
+			});
+
+			window.addEventListener("message", function(e) {
+			    if (e.data.ad_vars_request) {
+			      var ad_vars = e.data.ad_vars;
+
+			      ad_vars.creative_json.width = $('#engagement_width').val();
+			      ad_vars.creative_json.height = $('#engagement_height').val();
+
+			      if ($('#interactive_url').val() != "") {
+			      	ad_vars.asset_url = ad_vars.creative_json.asset_url = $('#interactive_url').val();
+			      }
+			      else if ($('#interactive_code').val() != "") {
+			        ad_vars.creative_json.asset_args = {'code':{'js_code':$('#interactive_code').val()}};
+			      }
+
+			      e.source.postMessage({"ad_vars_response":true, "ad_vars":ad_vars}, "*");
+			    }
+			});
+		});
+	</script>
+
+	</body>
+</html>
