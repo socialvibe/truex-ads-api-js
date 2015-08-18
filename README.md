@@ -5,11 +5,11 @@ This project provides documentation, examples, and an ad starter template for bu
 
 Getting Started
 ---------------
-Your HTML5 ad should be loadable from a single js file.  This js file may load additional js and css files, as needed.  Use the starter ad [template](https://github.com/socialvibe/truex-ads-api-js/blob/master/new-ad-template/creative.js) within this project for your convenience.
+Your HTML5 ad should be loadable from a single js file.  This js file may load additional js and css files, as needed.  Use the new ad [template](https://github.com/socialvibe/truex-ads-api-js/blob/master/new-ad-template/creative.js) within this project for your convenience.
 
-Note: The TrueX ad container has jQuery v1.11.3 loaded and you may access it as normal from `$.`.
+Note: The TrueX ad container has jQuery v1.11.3 loaded and you may access it as normal.
 
-Lastly, a [test page](http://) is provided to test your ad js.
+Lastly, a [test page](http://socialvibe.github.io/truex-ads-api-js/) is provided to test your ad js.
 
 
 Ad Lifecycle
