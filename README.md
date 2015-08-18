@@ -178,6 +178,14 @@ TXM.api.track('other', 'score_submitted');
 ```
 
 
+#### 3rd-Party Tracking
+The TrueX ad container provides two methods for loading 3rd-party tracking tags.  Use `loadExternalTracking` for image/pixel tags, and use `loadExternalScript` for script tags.
 
+```js
+TXM.utils.loadExternalTracking(/* pixel_url */);
+
+TXM.utils.loadExternalScript(/* script_url */);
+
+```
 
 
