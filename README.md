@@ -23,12 +23,14 @@ TXM.dispatcher.dispatchEvent('INTERACTIVE_ASSET_READY');
 ```
 
 ##### Start
-When the TrueX engagement is ready to start, the container will dispatch an `ENGAGEMENT_STARTED` event.  During initialization of your ad, you should add a listener for that event:
+When the TrueX engagement is ready to start, the container will dispatch an `ENGAGEMENT_STARTED` event.  During initialization of your ad, you should add a listener for that event.  When the ad is started, you should append HTML DOM elements to the document `body` to reveal your ad to the user.
 ```js
 TXM.dispatcher.addEventListenerOnce('ENGAGEMENT_STARTED', onEngagementStart);
 
 function onEngagementStart() {
 	// Your ad should begin here.  Start intro animations, videos, etc.
+
+	// Add DOM elements to the page 'body'.  Example: $('body').append(panel); or TXM.ui.show(/* ad html */);
 }
 ```
 

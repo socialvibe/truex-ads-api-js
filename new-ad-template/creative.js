@@ -13,6 +13,8 @@
 
 		_onStart: function() {
 			// start ad
+
+			TXM.ui.show(/* ad html */);
 		},
 
 		_onEnd: function() {
