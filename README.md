@@ -1,4 +1,4 @@
-TrueX Ads API for JavaScript 
+TrueX Ads API for JavaScript
 ==================================================
 
 This project provides documentation, examples, and an ad starter template for building HTML5 rich-media interactive ads (engagements) for TrueX's ad container.
@@ -134,7 +134,7 @@ Retrieving vota data.  This method retrieves all vote data of users who have com
 var votaData = TXM.api.getVoteSummary();
 
 // returns an Array of vote data Objects, example:
-// [ {category:"1", label:"Coca-cola", vote:"11", vote_count:"2023"}, ...]
+// [ {category:"1", vote:"11", vote_count:"2023"}, ...]
 
 ```
 
