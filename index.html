@@ -83,8 +83,10 @@
 
 			$('#load_engagement').on('click', function() {
 				var url = 'http://serve.truex.com/engage?preview=true&creative_json_url=http://media.truex.com/studio/1.0/';
+				var header_height = 40;
 				if ($('#mobile_size').prop('checked')) {
 					url += 'preview_mobile.json';
+					header_height = 54;
 				} else {
 					url += 'preview.json';
 				}
@@ -93,15 +95,15 @@
 					url += '&asset_url=' + encodeURIComponent($('#interactive_url').val());
 				}
 
-				$('#iframe').css({width:$('#engagement_width').val() + 'px', height:$('#engagement_height').val() + 'px'}).attr('src', url);
+				$('#iframe').css({width:$('#engagement_width').val() + 'px', height:($('#engagement_height').val()+header_height) + 'px'}).attr('src', url);
 			});
 
 			$('input[name="dimensions"]').on('change', function() {
 				if ($('#mobile_size').prop('checked')) {
-					$('#engagement_width').val('360').attr('readonly', 'readonly');
-					$('#engagement_height').val('540').attr('readonly', 'readonly');
+					$('#engagement_width').val('960').attr('readonly', 'readonly');
+					$('#engagement_height').val('500').attr('readonly', 'readonly');
 				} else if ($('#desktop_size').prop('checked')) {
-					$('#engagement_width').val('750').attr('readonly', 'readonly');
+					$('#engagement_width').val('960').attr('readonly', 'readonly');
 					$('#engagement_height').val('500').attr('readonly', 'readonly');
 				} else {
 					$('#engagement_width').val('').removeAttr('readonly');
