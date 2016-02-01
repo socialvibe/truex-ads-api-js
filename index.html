@@ -36,10 +36,9 @@
 			}
 			#iframe {
 				position: absolute;
-				left: 725px;
-				top: 0;
+				top: 125px;
 				overflow: hidden;
-				width: 360px;
+				width: 960px;
 				height: 540px;
 			}
 			.settings > div {
@@ -61,8 +60,8 @@
 				<input id="desktop_size" type="radio" name="dimensions" value="desktop">Desktop
 				<input id="custom_size" type="radio" name="dimensions" value="custom">Custom
 				<span class="spacer"> - </span>
-				<span>Width:</span><input id="engagement_width" type="number" min="0" value="360" readonly="readonly">
-				<span>Height:</span><input id="engagement_height" type="number" min="0" value="540" readonly="readonly">
+				<span>Width:</span><input id="engagement_width" type="number" min="0" value="960" readonly="readonly">
+				<span>Height:</span><input id="engagement_height" type="number" min="0" value="500" readonly="readonly">
 			</div>
 			
 			<div class='code_selector'>
@@ -95,7 +94,7 @@
 					url += '&asset_url=' + encodeURIComponent($('#interactive_url').val());
 				}
 
-				$('#iframe').css({width:$('#engagement_width').val() + 'px', height:($('#engagement_height').val()+header_height) + 'px'}).attr('src', url);
+				$('#iframe').css({width:$('#engagement_width').val() + 'px', height:(parseInt($('#engagement_height').val(),10)+header_height) + 'px'}).attr('src', url);
 			});
 
 			$('input[name="dimensions"]').on('change', function() {
