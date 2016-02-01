@@ -7,7 +7,7 @@ serviceUrl = 'http://media.truex.com/m/activties/jitb/';
 var assets = [];
 
 var parseConfig = function(config) {
-  $('body').append($('<div id="ad"/>').hide());
+  TXM.ui.show($('<div id="ad"/>').hide());
 
   var layout = config.steps.reverse();
 

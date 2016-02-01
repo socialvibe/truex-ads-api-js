@@ -266,7 +266,7 @@ TXM.dispatcher.addEventListener('ENGAGEMENT_STARTED', function(){
 
 
 
-  $('body').append('\
+  TXM.ui.show('\
   <div class="mobile_container">\
   \
   <div class="frame" id="frame1">\
