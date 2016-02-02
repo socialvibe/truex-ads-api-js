@@ -96,7 +96,7 @@
 					url += '&asset_url=' + encodeURIComponent($('#interactive_url').val());
 				}
 
-				$('#iframe').css({width:parseInt($('#engagement_width').val(),10)+side_padding) + 'px', height:(parseInt($('#engagement_height').val(),10)+header_height) + 'px'}).attr('src', url);
+				$('#iframe').css({width:(parseInt($('#engagement_width').val(),10)+side_padding) + 'px', height:(parseInt($('#engagement_height').val(),10)+header_height) + 'px'}).attr('src', url);
 			});
 
 			$('input[name="dimensions"]').on('change', function() {
