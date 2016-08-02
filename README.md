@@ -192,3 +192,13 @@ TXM.utils.loadExternalScript(/* script_url */);
 ```
 
 
+#### Accessing Ad Container Parameters
+The TrueX ad container stores parameters in a global `TXM.params` variable.  Here are some useful exisiting parameters:
+```js
+TXM.params.campaign_id // campaign ID for this ad
+TXM.params.placement_id // ID of the publisher placement this ad is running on
+TXM.params.variant // 'A' or 'B' 50/50 random split.  Useful for a/b testing
+TXM.params.debug // 'true' if in debug mode
+TXM.params.zipcode // the zipcode of the user, if available
+```
+You can also add your own variables in Ad Settings -> Parameters in our Ad Studio.
