@@ -181,6 +181,19 @@ TXM.api.track('other', 'score_submitted');
 ```
 
 
+#### Autoplay Video
+Some browsers prevent autoplay video with sound.  The ad container detects this and sets `TXM.params.autoplay_with_sound_disabled` to `true` when autoplay with sound is not allowed.  Developers should check this parameter before autoplaying video.  If `TXM.params.autoplay_with_sound_disabled`, video should be played muted with a 'Tap For Sound' option (mobile) or 'Click For Sound' option (desktop).
+
+```js
+if (TXM.params.autoplay_with_sound_disabled) {
+    // play video muted with 'Tap For Sound' option
+} else {
+    // play video normally with sound
+}
+
+```
+
+
 #### 3rd-Party Tracking
 The TrueX ad container provides two methods for loading 3rd-party tracking tags.  Use `loadExternalTracking` for image/pixel tags, and use `loadExternalScript` for script tags.
 
