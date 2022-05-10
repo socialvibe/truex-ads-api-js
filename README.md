@@ -139,16 +139,15 @@ var votaData = TXM.api.getVoteSummary();
 
 ```
 
-Saving comment data:
+Saving comment data: 
 ```js
+// This is now deprecated and expected to be unused due to legal and privacy conerns. It's existing usage is as follows.
 TXM.api.saveCommentData(/* comment */, /* label */);
-
-// Example
-TXM.api.saveCommentData('I like diet coke!', 'fav_drink');
 ```
 
 Retrieving comment data.  This method retrieves the last 5 comments made by users:
 ```js
+// This is now deprecated and expected to be unused due to legal and privacy conerns. It's existing usage is as follows.
 var commentData = TXM.api.getRecentComments();
 
 // returns an Array of comment data Objects, example:
